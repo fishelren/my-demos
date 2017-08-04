@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>index</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    <form action="/index/" method="post">
+	{% csrf_token %} <!--post方式提交需要加，get不需要-->
+	UserName:{{ form.username }} <!--根据后台传来的表单对象自动创建表单控件-->
+	&nbsp;&nbsp;&nbsp;
+	Age:{{ form.age }}
+	&nbsp;&nbsp;&nbsp;
+	<button type="submit">Submit</button>
+</form>
+</body>
+</html>
